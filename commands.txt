@@ -6,3 +6,11 @@ git remote set-url origin https://github.com/mknepper78/pal-tracker-max.git
 
 push command
 git push -u max-origin master
+
+CF Push Command
+cf push pal-tracker -p build/libs/pal-tracker.jar --random-route
+
+To run the app
+java -jar build/libs/pal-tracker.jar
+
+
