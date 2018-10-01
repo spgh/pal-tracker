@@ -1,0 +1,8 @@
+add another remote:
+git remote add max-origin https://github.com/mknepper78/pal-tracker-max.git
+
+to change the alias:
+git remote set-url origin https://github.com/mknepper78/pal-tracker-max.git
+
+push command
+git push -u max-origin master
