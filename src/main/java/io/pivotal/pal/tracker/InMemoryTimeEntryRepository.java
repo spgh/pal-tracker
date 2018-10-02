@@ -12,7 +12,6 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository
     Map<Long, TimeEntry> repo = new HashMap<Long, TimeEntry>();
     private int idCounter = 0;
 
-
     public TimeEntry create(TimeEntry te, long id) {
         te.setId(id);
         repo.put(id, te);
@@ -23,9 +22,6 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository
     }
 
     public List<TimeEntry> list() {
-
-
-
         return new ArrayList<TimeEntry>(repo.values());
     }
 
