@@ -61,6 +61,17 @@ public class InMemoryTimeEntryRepositoryTest {
     }
 
     @Test
+    public void update_NotFound() throws Exception {
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+
+        TimeEntry updatedEntry = repo.update(
+                1,
+                new TimeEntry(321L, 654L, LocalDate.parse("2017-01-09"), 5));
+
+        assertThat(updatedEntry).isNull();
+    }
+
+    @Test
     public void delete() throws Exception {
         InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
         TimeEntry created = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));

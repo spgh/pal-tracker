@@ -95,6 +95,7 @@ public class TimeEntryControllerTest {
         verify(timeEntryRepository).update(1L, expected);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isEqualTo(expected);
+        verifyNoMoreInteractions(timeEntryRepository);
     }
 
     @Test
@@ -105,6 +106,7 @@ public class TimeEntryControllerTest {
 
         ResponseEntity response = controller.update(1L, new TimeEntry());
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+      //  verifyNoMoreInteractions(timeEntryRepository);
     }
 
     @Test
