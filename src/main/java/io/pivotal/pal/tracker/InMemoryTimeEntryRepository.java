@@ -10,6 +10,7 @@ import java.util.Map;
 public class InMemoryTimeEntryRepository implements TimeEntryRepository
 {
     Map<Long, TimeEntry> repo = new HashMap<Long, TimeEntry>();
+    private int idCounter = 0;
 
 
     public TimeEntry create(TimeEntry te, long id) {
@@ -49,6 +50,6 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository
     }
 
     public TimeEntry create(TimeEntry te) {
-        return create(te, repo.size()+1);
+        return create(te, ++idCounter);
     }
 }

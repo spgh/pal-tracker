@@ -50,6 +50,18 @@ public class TimeEntry {
         return this.getId() == other.getId();
     }
 
+
+    @Override
+    public String toString() {
+        return "TimeEntry{" +
+                "id=" + id +
+                ", projectId=" + projectId +
+                ", userId=" + userId +
+                ", date=" + date +
+                ", hours=" + hours +
+                '}';
+    }
+
     public void setId(long id) {
         this.id = id;
     }
