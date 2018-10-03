@@ -4,6 +4,6 @@ applications:
   path: build/libs/pal-tracker.jar
   #  random-route: true
   routes:
-  - route: pal3-tracker-bold-camel-review.apps.evans.pal.pivotal.io
+  - route: pal-tracker-paltrain.apps.evans.pal.pivotal.io
   env:
     WELCOME_MESSAGE: Hello from the review environment-2
